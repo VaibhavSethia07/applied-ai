@@ -1,7 +1,7 @@
-import random 
 from typing import Literal
 from typing_extensions import TypedDict
 from langgraph.graph import StateGraph, START, END
+import secrets
 
 # State
 class State(TypedDict):
@@ -14,7 +14,7 @@ def decide_mood(state) -> Literal["node_2", "node_3"]:
     user_input = state['graph_state'] 
     
     # Here, let's just do a 50 / 50 split between nodes 2, 3
-    if random.random() < 0.5:
+    if secrets.SystemRandom().random() < 0.5:
 
         # 50% of the time, we return Node 2
         return "node_2"
