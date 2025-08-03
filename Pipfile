@@ -31,6 +31,8 @@ scipy = "*"
 sounddevice = "*"
 uv = "*"
 dotenv = "*"
+smolagents = {extras = ["openai"], version = "==1.12.0"}
+ddgs = "*"
 
 [dev-packages]
 
